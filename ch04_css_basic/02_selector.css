@@ -1,0 +1,50 @@
+/* 모든 요소 선택 */
+* {
+  font-weight: bold;
+  color: darkorange;
+}
+
+* {
+  color: plum;
+}
+
+/* 태그 선택자 */
+p {
+  color: olivedrab;
+}
+
+/* 클래스 선택자 */
+.blue {
+  color: lightblue;
+}
+
+p.blue {
+  color: slateblue;
+}
+
+.blue.dark {
+  color: mediumblue;
+}
+
+p.blue.dark {
+  color: darkblue;
+}
+
+/*
+  첫 번째 예시는 태그 선택자에 '.'을 붙여서 클래스 선택자가 적용된 점입니다. 그러면 span class="blue"보다 더 구체적이기 때문에 span class="blue"에는 lightblue가 적용되어있고,
+  p class="blue"에는 slateblue가 적용됐다는 것을 확인할 수 있습니다.
+
+  .blue.dark이기 때문에 '모든 태그에서 class 명이 blue이면서 dark인 것'을 찾아서 mediumblue를 적용한다는 의미가 되겠습니다. 저희 html 상에서는 하나밖에 없죠.
+
+  그런데, p.blue.dark이기 때문에 더 구체적으로 조건이 명시되었으므로, 결과적으로 mediumblue가 아니라 darkblue가 적용되었음을 확인할 수 있습니다.
+*/
+
+/* id 선택자 */
+#red {
+  color: tomato;
+}
+
+/* 그룹 선택자 */
+span, .dark, #red {
+  text-decoration: underline;
+}
